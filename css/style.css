@@ -24,3 +24,70 @@ ul:nth-child(4){
 ul:nth-child(5){
     color:rgb(206, 63, 7)
 }
+tr:nth-child(1) th {
+    border:auto ; 
+    padding: 10px ;
+    color:rgb(243, 169, 10);
+    font-size: 20px;
+}
+tr:nth-child(2) th {
+    border:double ; 
+    padding: 10px ;
+}
+tr:nth-child(3) th {
+border:double ; 
+padding: 10px ;}
+tr:nth-child(4) th {
+ border:double ; 
+padding: 10px ;}
+tr:nth-child(5) th {
+border:double ; 
+padding: 10px ;}
+tr:nth-child(6) th {
+    border:double ; 
+    padding: 10px ;}
+    tr:nth-child(7) th {
+        border:double ; 
+        padding: 10px ;}
+th:nth-child(1){
+    color:coral;
+    font-size: 20px;
+}
+
+                        
+
+tr:nth-child(2) td{
+    border: solid ; 
+    padding: 10px ;
+    color:rgb(11, 26, 238);
+}
+tr:nth-child(3) td{
+    border: solid ; 
+    padding: 10px ;
+    color:rgb(238, 11, 11);
+}
+tr:nth-child(4) td{
+    border: solid ; 
+    padding: 10px ;
+    color:rgb(233, 61, 8);
+}
+tr:nth-child(5) td{
+    border: solid ; 
+    padding: 10px ;
+    color:rgb(6, 109, 6);
+}
+tr:nth-child(6) td{
+    border: solid ; 
+    padding: 10px ;
+    color:rgb(8, 8, 8);
+}
+tr:nth-child(7) td{
+    border: solid ; 
+    padding: 10px ;
+    color:rgb(163, 46, 163);
+}
+
+
+
+
+
