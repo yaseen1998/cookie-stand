@@ -1,18 +1,41 @@
  let cookiesProfiles = document.getElementById('cookiesProfiles');
- let articleElement = document.createElement('article');
- cookiesProfiles.appendChild(articleElement);
- let tableelement = document.createElement('table')
- articleElement.appendChild(tableelement)
- time = ['location/time','6:00am ', '7:00am ', '8:00am ', '9:00am ', '10:00am ', '11:00am ', '12:00pm ', '1:00pm ', '2:00pm ', '3:00pm ', '4:00pm ', '5:00pm ', '6:00pm ', '7:00pm ', 'daily total: '];
- let row_1 = document.createElement('tr')
- tableelement.appendChild(row_1)
-for (let i=0;i<time.length;i++){
- let th_1 = document.createElement('th')
- th_1.textContent = time[i]
-row_1.appendChild(th_1)
-}
+let articleElement = document.createElement('article');
+cookiesProfiles.appendChild(articleElement);
+let tableelement = document.createElement('table');
+articleElement.appendChild(tableelement).classList.add("tab1")
+//###################################################
+time = ['location/time','6:00am ', '7:00am ', '8:00am ', '9:00am ', '10:00am ', '11:00am ', '12:00pm ', '1:00pm ', '2:00pm ', '3:00pm ', '4:00pm ', '5:00pm ', '6:00pm ', '7:00pm ', 'daily total: '];
 
 column = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+//###################################################
+
+function header (){
+
+  let row_1 = document.createElement('tr')
+  tableelement.appendChild(row_1)
+  for (let i=0;i<time.length;i++){
+  let th_1 = document.createElement('th')
+  th_1.textContent = time[i]
+  row_1.appendChild(th_1)
+  }
+  //###################################
+  };
+  function footer(){
+    let row_2 = document.createElement('tr')
+  tableelement.appendChild(row_2)
+  
+  let th_1 = document.createElement('th')
+   th_1.textContent = 'total'
+  row_2.appendChild(th_1)
+  
+  for (let i = 1; i < time.length; i++) {
+    
+    let td_1 = document.createElement('td');
+    td_1.textContent =  column[i] ;
+    row_2.appendChild(td_1);
+  }
+  }
+  //################################
 function cookie(name, min, max, avg) {
   
   this.location = name;
@@ -23,12 +46,16 @@ function cookie(name, min, max, avg) {
   this.rand = 0;
   this.random = 0;
 }
+//###################################################
 
 cookie.prototype.randm = function () {
   this.rand = Math.floor(Math.floor(Math.random() * (this.max - this.min + 1) + this.min) * this.avg)
   this.total += this.rand
   return this.rand
 };
+//###################################################
+
+//###################################################
 
 cookie.prototype.render = function () {
   
@@ -53,35 +80,24 @@ row_2.appendChild(th_1)
     row_2.appendChild(td_1);
   }
 }
+//###################################################
 
 let seattle = new cookie('seattle', 23, 65, 6.3)
 let tokyo = new cookie('tokyo', 3, 24, 1.2)
 let Dubai = new cookie('Dubai', 11, 38, 3.7)
 let Paris = new cookie('Paris', 20, 38, 2.3)
 let lima = new cookie('lima', 2, 16, 4.6)
-
+header()
 seattle.render()
+
 tokyo.render()
 Dubai.render()
 Paris.render()
 lima.render()
-console.log(column)
+footer()
 
-
-let row_2 = document.createElement('tr')
-tableelement.appendChild(row_2)
-
-let th_1 = document.createElement('th')
- th_1.textContent = 'total'
-row_2.appendChild(th_1)
-
-for (let i = 1; i < time.length; i++) {
-  
-  let td_1 = document.createElement('td');
-  td_1.textContent =  column[i] ;
-  row_2.appendChild(td_1);
-}
-
+//###################################################
+//###################################################
 
 
 
