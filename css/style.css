@@ -13,7 +13,7 @@ ul:nth-child(1){
 }
 
 ul:nth-child(2){
-    color:red
+    color:rgb(241, 86, 86)
 }
 ul:nth-child(3){
     color:blue
@@ -51,43 +51,52 @@ tr:nth-child(6) th {
         padding: 10px ;}
 th:nth-child(1){
     color:coral;
-    font-size: 20px;
+    font-size: 25px;
 }
 
                         
 
 tr:nth-child(2) td{
+    font-size: 20px;
     border: solid ; 
     padding: 10px ;
     color:rgb(11, 26, 238);
 }
 tr:nth-child(3) td{
+    font-size: 20px;
     border: solid ; 
     padding: 10px ;
     color:rgb(238, 11, 11);
 }
 tr:nth-child(4) td{
-    border: solid ; 
-    padding: 10px ;
-    color:rgb(233, 61, 8);
-}
-tr:nth-child(5) td{
-    border: solid ; 
-    padding: 10px ;
-    color:rgb(6, 109, 6);
-}
-tr:nth-child(6) td{
+    font-size: 20px;
     border: solid ; 
     padding: 10px ;
     color:rgb(8, 8, 8);
 }
+tr:nth-child(5) td{
+    font-size: 20px;
+    border: solid ; 
+    padding: 10px ;
+    color:rgb(73, 151, 73);
+}
+tr:nth-child(6) td{
+    font-size: 20px;
+    border: solid ; 
+    padding: 10px ;
+    
+    color:rgb(240, 82, 34);
+}
 tr:nth-child(7) td{
     border: solid ; 
     padding: 10px ;
-    color:rgb(163, 46, 163);
+    color:rgb(187, 103, 187);
+    font-size: 20px;
 }
 
 
 
 
 
+.tab1{
+    background-color:rgb(71, 70, 70)}
