@@ -3,7 +3,7 @@
  cookiesProfiles.appendChild(articleElement);
  let tableelement = document.createElement('table')
  articleElement.appendChild(tableelement)
- time = ['location/time','6:00am ', '7::00am ', '8:00am ', '9:00am ', '10:00am ', '11:00am ', '12:00pm ', '1:00pm ', '2:00pm ', '3:00pm ', '4:00pm ', '5:00pm ', '6:00pm ', '7:00pm ', 'daily total: '];
+ time = ['location/time','6:00am ', '7:00am ', '8:00am ', '9:00am ', '10:00am ', '11:00am ', '12:00pm ', '1:00pm ', '2:00pm ', '3:00pm ', '4:00pm ', '5:00pm ', '6:00pm ', '7:00pm ', 'daily total: '];
  let row_1 = document.createElement('tr')
  tableelement.appendChild(row_1)
 for (let i=0;i<time.length;i++){
@@ -12,7 +12,7 @@ for (let i=0;i<time.length;i++){
 row_1.appendChild(th_1)
 }
 
-column = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+column = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
 function cookie(name, min, max, avg) {
   
   this.location = name;
@@ -38,7 +38,7 @@ tableelement.appendChild(row_2)
 let th_1 = document.createElement('th')
  th_1.textContent = this.location
 row_2.appendChild(th_1)
-  for (let i = 0; i < time.length; i++) {
+  for (let i = 1; i < time.length; i++) {
     if (i ==time.length - 1) {
       column[i] += this.total
       let td_1 = document.createElement('td');
@@ -75,7 +75,7 @@ let th_1 = document.createElement('th')
  th_1.textContent = 'total'
 row_2.appendChild(th_1)
 
-for (let i = 0; i < this.time.length; i++) {
+for (let i = 1; i < time.length; i++) {
   
   let td_1 = document.createElement('td');
   td_1.textContent =  column[i] ;
