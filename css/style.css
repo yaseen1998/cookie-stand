@@ -127,4 +127,31 @@ tr:nth-child(10) td{
 
 .tab1{
     background-color:rgb(71, 70, 70)}
+
+    fieldset{
+        padding: 30px;
+        border:10px;
+        margin: 10px;
+        background-color: #B2B1B9;
+    }
+    legend{
+      padding-top:20px ;
+      font-size: 20px;
+      color:#4F0E0E
+  }
+
+  input{
+      height:30px;
+  }
+
+  input:invalid {
+    border: 2px dashed red;
+  }
   
+  input:invalid:required {
+    background-color: rgb(98, 202, 228);
+  }
+  
+  input:valid {
+    border: 2px solid black;
+  }

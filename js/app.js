@@ -10,7 +10,7 @@ time = ['location/time','6:00am ', '7:00am ', '8:00am ', '9:00am ', '10:00am ', 
 column = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
 count = 0
 //###################################################
-
+//#####################################################
 function header (){
 
   let row_1 = document.createElement('tr')
@@ -20,6 +20,8 @@ function header (){
   th_1.textContent = time[i]
   row_1.appendChild(th_1)
   }
+  //###################################################
+//#####################################################
   //###################################
   };
   function footer2(){
@@ -38,6 +40,8 @@ function header (){
     row_2.appendChild(td_1);
   }
   }
+  //###################################################
+//#####################################################
   //#################################
   function footer(){
     let row_2 = document.createElement('tr')
@@ -54,6 +58,8 @@ function header (){
     row_2.appendChild(td_1);
   }
 }
+//###################################################
+//#####################################################
   //################################
 function cookie(name, min, max, avg) {
   
@@ -100,24 +106,21 @@ row_2.appendChild(th_1)
   }
 }
 //###################################################
-
+//#####################################################
 let seattle = new cookie('seattle', 23, 65, 6.3)
 let tokyo = new cookie('tokyo', 3, 24, 1.2)
 let Dubai = new cookie('Dubai', 11, 38, 3.7)
 let Paris = new cookie('Paris', 20, 38, 2.3)
 let lima = new cookie('lima', 2, 16, 4.6)
-
+city=[seattle,tokyo,Dubai,Paris,lima]
 header()
-seattle.render()
-tokyo.render()
-Dubai.render()
-Paris.render()
-lima.render()
 
-
+for(let i =0;i<city.length;i++){
+  city[i].render()
+}
 footer()
-
-
+//###################################################
+//#####################################################
 addlocation.addEventListener('submit',submitHandler);
 
 function submitHandler  (event) {
