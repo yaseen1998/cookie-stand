@@ -1,3 +1,4 @@
+
 let addlocation = document.getElementById('addlocation');
  let cookiesProfiles = document.getElementById('cookiesProfiles');
 let articleElement = document.createElement('article');
@@ -20,26 +21,8 @@ function header (){
   th_1.textContent = time[i]
   row_1.appendChild(th_1)
   }
-  //###################################################
-//#####################################################
-  //###################################
-  };
-  function footer2(){
-    tableelement.removeChild(tableelement.childNodes[count]);
-    let row_2 = document.createElement('tr')
-  tableelement.appendChild(row_2)
+};
   
-  let th_1 = document.createElement('th')
-   th_1.textContent = 'total'
-  row_2.appendChild(th_1)
-  
-  for (let i = 1; i < time.length; i++) {
-    
-    let td_1 = document.createElement('td');
-    td_1.textContent =  column[i] ;
-    row_2.appendChild(td_1);
-  }
-  }
   //###################################################
 //#####################################################
   //#################################
@@ -132,7 +115,8 @@ function submitHandler  (event) {
   let new_location = new cookie(namelocation, numbermin, numbermax,  numberavg)
   addlocation.reset();
   new_location.render();
-  footer2()
+  tableelement.removeChild(tableelement.childNodes[count]);
+  footer()
   
 }
 
