@@ -23,7 +23,7 @@ function header (){
   //###################################
   };
   function footer2(){
-    tableelement.removeChild(tableelement.childNodes[count ]);
+    tableelement.removeChild(tableelement.childNodes[count]);
     let row_2 = document.createElement('tr')
   tableelement.appendChild(row_2)
   
@@ -113,9 +113,9 @@ tokyo.render()
 Dubai.render()
 Paris.render()
 lima.render()
+
+
 footer()
-
-
 
 
 addlocation.addEventListener('submit',submitHandler);
@@ -130,6 +130,7 @@ function submitHandler  (event) {
   addlocation.reset();
   new_location.render();
   footer2()
+  
 }
 
 

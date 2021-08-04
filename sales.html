@@ -17,18 +17,20 @@
           <input type="text" name="" id="locationname">
   
           <label for="minnumber">min number for cus</label>
-          <input type="text" name="" id="minnumber">
+          <input type="text" name="" id="minnumber" >
   
           <label for="maxnumber">max number for cus</label>
-          <input type="text" name="" id="maxnumber">
+          <input type="text" name="" id="maxnumber" pattern="(?=.*\d)"
+          title="just number">
 
           <label for="avgnumber">avg number for cookie</label>
-          <input type="text" name="" id="avgnumber">
+          <input type="text" name="" id="avgnumber"  pattern="(?=.*\d)"
+          title="just number">
   
           <input type="submit" value="Save">
         </form> 
       </fieldset>
-    
+     
       <div id="cookiesProfiles">
       </div>
     </main>
