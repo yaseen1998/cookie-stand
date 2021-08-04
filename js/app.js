@@ -1,3 +1,4 @@
+let addlocation = document.getElementById('addlocation');
  let cookiesProfiles = document.getElementById('cookiesProfiles');
 let articleElement = document.createElement('article');
 cookiesProfiles.appendChild(articleElement);
@@ -7,6 +8,7 @@ articleElement.appendChild(tableelement).classList.add("tab1")
 time = ['location/time','6:00am ', '7:00am ', '8:00am ', '9:00am ', '10:00am ', '11:00am ', '12:00pm ', '1:00pm ', '2:00pm ', '3:00pm ', '4:00pm ', '5:00pm ', '6:00pm ', '7:00pm ', 'daily total: '];
 
 column = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+count = 0
 //###################################################
 
 function header (){
@@ -20,7 +22,8 @@ function header (){
   }
   //###################################
   };
-  function footer(){
+  function footer2(){
+    tableelement.removeChild(tableelement.childNodes[count ]);
     let row_2 = document.createElement('tr')
   tableelement.appendChild(row_2)
   
@@ -35,6 +38,22 @@ function header (){
     row_2.appendChild(td_1);
   }
   }
+  //#################################
+  function footer(){
+    let row_2 = document.createElement('tr')
+  tableelement.appendChild(row_2)
+  
+  let th_1 = document.createElement('th')
+   th_1.textContent = 'total'
+  row_2.appendChild(th_1)
+  
+  for (let i = 1; i < time.length; i++) {
+    
+    let td_1 = document.createElement('td');
+    td_1.textContent =  column[i] ;
+    row_2.appendChild(td_1);
+  }
+}
   //################################
 function cookie(name, min, max, avg) {
   
@@ -58,9 +77,9 @@ cookie.prototype.randm = function () {
 //###################################################
 
 cookie.prototype.render = function () {
-  
+  count++
 let row_2 = document.createElement('tr')
-tableelement.appendChild(row_2)
+tableelement.appendChild(row_2).classList.add("ta1")
 
 let th_1 = document.createElement('th')
  th_1.textContent = this.location
@@ -87,14 +106,37 @@ let tokyo = new cookie('tokyo', 3, 24, 1.2)
 let Dubai = new cookie('Dubai', 11, 38, 3.7)
 let Paris = new cookie('Paris', 20, 38, 2.3)
 let lima = new cookie('lima', 2, 16, 4.6)
+
 header()
 seattle.render()
-
 tokyo.render()
 Dubai.render()
 Paris.render()
 lima.render()
 footer()
+
+
+
+
+addlocation.addEventListener('submit',submitHandler);
+
+function submitHandler  (event) {
+  event.preventDefault(); // Stop refreshing
+  let namelocation = event.target.locationname.value;
+  let numbermin = parseInt(event.target.minnumber.value);
+  let numbermax = parseInt(event.target.maxnumber.value);
+  let numberavg = parseInt(event.target.avgnumber.value);
+  let new_location = new cookie(namelocation, numbermin, numbermax,  numberavg)
+  addlocation.reset();
+  new_location.render();
+  footer2()
+}
+
+
+
+
+
+
 
 //###################################################
 //###################################################

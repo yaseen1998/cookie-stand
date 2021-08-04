@@ -53,6 +53,15 @@ th:nth-child(1){
     color:coral;
     font-size: 25px;
 }
+tr:nth-child(8) th {
+    border:double ; 
+    padding: 10px ;}
+    tr:nth-child(9) th {
+        border:double ; 
+        padding: 10px ;}
+        tr:nth-child(10) th {
+            border:double ; 
+            padding: 10px ;}
 
                         
 
@@ -93,6 +102,24 @@ tr:nth-child(7) td{
     color:rgb(187, 103, 187);
     font-size: 20px;
 }
+tr:nth-child(8) td{
+    border: solid ; 
+    padding: 10px ;
+    color:#ce8157;
+    font-size: 20px;
+}
+tr:nth-child(9) td{
+    border: solid ; 
+    padding: 10px ;
+    color:#861818;
+    font-size: 20px;
+}
+tr:nth-child(10) td{
+    border: solid ; 
+    padding: 10px ;
+    color:#005792;
+    font-size: 20px;
+}
 
 
 
@@ -100,3 +127,4 @@ tr:nth-child(7) td{
 
 .tab1{
     background-color:rgb(71, 70, 70)}
+  
